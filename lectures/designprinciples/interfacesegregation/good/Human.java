@@ -1,7 +1,5 @@
 package designprinciples.interfacesegregation.good;
 
-import designprinciples.interfacesegregation.bad.IWorker;
-
 public class Human implements IWorkable, IEating {
     @Override
     public void work() {

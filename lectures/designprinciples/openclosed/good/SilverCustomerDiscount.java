@@ -1,6 +1,6 @@
 package designprinciples.openclosed.good;
 
-public class SilverCustomerDiscount implements IDiscountPolicy {
+public class SilverCustomerDiscount extends DiscountPolicy {
 
     @Override
     public double calculateDiscount(double amount) {

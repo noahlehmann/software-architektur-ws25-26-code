@@ -1,6 +1,6 @@
 package designprinciples.openclosed.good;
 
-public class SeasonalDiscount implements IDiscountPolicy {
+public class SeasonalDiscount extends DiscountPolicy {
 
     @Override
     public double calculateDiscount(double amount) {

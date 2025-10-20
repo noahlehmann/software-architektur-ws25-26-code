@@ -1,9 +1,9 @@
 package designprinciples.openclosed.good;
 
 public class DiscountCalculator {
-    private final IDiscountPolicy discountPolicy;
+    private final DiscountPolicy discountPolicy;
 
-    public DiscountCalculator(IDiscountPolicy discountPolicy) {
+    public DiscountCalculator(DiscountPolicy discountPolicy) {
         this.discountPolicy = discountPolicy;
     }
 
