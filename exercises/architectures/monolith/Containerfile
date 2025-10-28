@@ -1,0 +1,15 @@
+FROM maven:3-openjdk-17-slim AS build
+
+WORKDIR /opt/code
+COPY bar-service .
+EXPOSE 5005
+RUN mvn clean package -DskipTests
+
+FROM eclipse-temurin:17-jre-jammy AS run
+
+WORKDIR /app
+COPY --from=build /opt/code/target/*.jar app.jar
+
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "app.jar"]
+
